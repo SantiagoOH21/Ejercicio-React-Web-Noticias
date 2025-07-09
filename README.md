@@ -71,7 +71,7 @@ Una aplicación web desarrollada con **React**, que permite al usuario consultar
 | `/`         | `Home`     | Página principal con bienvenida y navegación |
 | `/api-news` | `ApiNews`  | Noticias reales desde el New York Times API  |
 | `/form`     | `Form`     | Formulario para crear una nueva noticia      |
-| `/list`     | `ListNews` | Lista de noticias creadas localmente         |
+| `/list`     | `NewsList` | Lista de noticias creadas localmente         |
 
 ---
 
@@ -84,7 +84,7 @@ Una aplicación web desarrollada con **React**, que permite al usuario consultar
 1. Rellenas el formulario en `/form`
 2. La noticia se guarda automáticamente en **LocalStorage**
 3. Redirecciona automáticamente a `/list`
-4. Se renderizan las noticias en `ListNews` desde el **Contexto Global**
+4. Se renderizan las noticias en `NewsList` desde el **Contexto Global**
 
 ---
 
