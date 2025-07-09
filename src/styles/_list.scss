@@ -1,0 +1,48 @@
+@use "variables" as *;
+
+.list-news {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    background: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid $primary-color;
+    box-shadow: 0 0 5px #0000001a;
+  }
+
+  li h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: $primary-color;
+  }
+
+  li p {
+    margin: 0.5rem 0;
+  }
+
+  li small {
+    display: block;
+    text-align: right;
+    color: #888;
+  }
+
+  // Responsive
+  @media (max-width: 600px) {
+    article {
+      padding: 0.8rem;
+    }
+  }
+}

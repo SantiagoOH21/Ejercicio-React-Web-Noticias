@@ -1,0 +1,80 @@
+@use "sass:color";
+@use "variables" as *;
+
+.home {
+  position: relative;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .overlay {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .home-content {
+    max-width: 700px;
+    margin: auto;
+    width: 100%;
+    padding: 0 1rem;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      color: color.adjust($primary-color, $lightness: -10%);
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+
+      .btn-explore {
+        flex: 1 1 200px;
+        max-width: 250px;
+        text-align: center;
+        background-color: $primary-color;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: color.adjust($primary-color, $lightness: -10%);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .home-content {
+      padding-bottom: 0.5rem;
+
+      .button-group {
+        flex-direction: column;
+        align-items: stretch;
+
+        .btn-explore {
+          width: 100%;
+          max-width: none;
+          max-height: 3rem;
+        }
+      }
+    }
+  }
+}

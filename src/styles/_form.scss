@@ -1,0 +1,33 @@
+@use "sass:color";
+@use "variables" as *;
+
+.news-form {
+  max-width: 600px;
+  margin: auto;
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+  }
+
+  button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%);
+    }
+  }
+
+  // Responsive
+  @media (max-width: 500px) {
+    padding: 1rem;
+  }
+}
